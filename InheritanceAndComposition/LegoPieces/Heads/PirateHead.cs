@@ -4,12 +4,10 @@ using System.Text;
 
 namespace InheritanceAndComposition.LegoPieces.Heads
 {
-    class PirateHead
+    class PirateHead : Head
     {
         public bool HasPatch { get; set; }
         public string FacialHair { get; set; }
-        public HairColor HairColor { get; set; }
-        public EyeColor EyeColor { get; set; }
 
         public void Sing()
         {
@@ -21,7 +19,7 @@ namespace InheritanceAndComposition.LegoPieces.Heads
             Console.WriteLine($"Har Har Har.");
         }
 
-        public void Greet()
+        public override void Greet()
         {
             Console.WriteLine("AAAAAAARGH!");
         }
