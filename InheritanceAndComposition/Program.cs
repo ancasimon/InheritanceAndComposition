@@ -1,4 +1,6 @@
 ﻿using InheritanceAndComposition.LegoPieces.Heads;
+using InheritanceAndComposition.LegoPieces.Legs;
+using InheritanceAndComposition.LegoPieces.Torsos;
 using System;
 using System.Collections.Generic;
 
@@ -43,8 +45,19 @@ namespace InheritanceAndComposition
             //we can access what they share in common - but none of the things they don't share in common!!!
 
 
-            var astronaut = new MiniFigure("Major Tom", astronautHead);
-            var cowgirl = new MiniFigure("Jessie", cowgirlHead);
+            //var torso = new Torso(); //NOTE: you cna no longer create this instance once you mark the Torso class as abstract!
+
+            var farmerTorso = new FarmerTorso(Sex.Male);
+            var ninjaTorso = new NinjaTorso();
+
+            farmerTorso.PickUp("Goat");
+            ninjaTorso.PickUp("Box");
+
+            var cyclistLegs = new CyclistLegs();
+            var countryMusicSingerLegs = new CountryMusicSingerLegs("Blue Jeans", false);
+
+            var astronaut = new MiniFigure("Major Tom", astronautHead, ninjaTorso, countryMusicSingerLegs);
+            var cowgirl = new MiniFigure("Jessie", cowgirlHead, farmerTorso, cyclistLegs);
 
             astronaut.SayHello();
             cowgirl.SayHello();
