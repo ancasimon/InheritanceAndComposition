@@ -45,7 +45,7 @@ namespace InheritanceAndComposition
             //we can access what they share in common - but none of the things they don't share in common!!!
 
 
-            //var torso = new Torso(); //NOTE: you cna no longer create this instance once you mark the Torso class as abstract!
+            //var torso = new Torso(); //NOTE: you can no longer create this instance once you mark the Torso class as abstract!
 
             var farmerTorso = new FarmerTorso(Sex.Male);
             var ninjaTorso = new NinjaTorso();

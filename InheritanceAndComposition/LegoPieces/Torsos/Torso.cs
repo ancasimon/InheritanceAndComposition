@@ -11,6 +11,9 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
         public string Accessory { get; set; }
         public Sex Sex { get; set; }
 
+        //example of static field!!! - this static keyword is saying that every instance of the Torso class shares this field. Until now, the properties/methods/field were specific to each instance.
+        static int _numberOfItemsPickedUp = 0;
+
         public virtual void Wave()
         {
             Console.WriteLine($"Waves Hello with their {ArmType} arm.");
@@ -40,6 +43,7 @@ namespace InheritanceAndComposition.LegoPieces.Torsos
             if (IsStrong())
             {
                 Console.WriteLine($"I used my strong arms to pick up the {heavyObject}.");
+                _numberOfItemsPickedUp++;
             }
             else
             {
